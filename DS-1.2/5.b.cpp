@@ -1,28 +1,27 @@
-#include <iostream>
+#include<iostream>
+#include<string.h>
 using namespace std;
-int main() {
-    int n;
-    cout << "Enter size of tri-diagonal matrix: ";
-    cin >> n;
-    int tri[3*n - 2]; 
-    cout << "Enter elements row by row:"<<endl;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            int x; cin >> x;
-            if (i-j == 0) tri[n-1+i] = x; 
-            else if (i-j == 1) tri[i-1] = x; 
-            else if (i-j == -1) tri[2*n-1+i] = x; 
-        }
-    }
-    cout<<endl;
-    cout << "Matrix is:"<<endl;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            if (i-j == 0) cout << tri[n-1+i] << " ";
-            else if (i-j == 1) cout << tri[i-1] << " ";
-            else if (i-j == -1) cout << tri[2*n-1+i] << " ";
-            else cout << "0 ";
-        }
-        cout << endl;
-    }
+int main(){
+	int n;
+	cout<<"Enter the number of rows/column : ";
+	cin>>n;
+	int arr[3*n-2];
+	cout<<"Enter the elements of the array : ";
+	for(int k=0;k<(3*n-2);k++){
+		cin>>arr[k];
+	}
+	int l=0;
+	for(int i=0;i<n;i++){
+		cout<<endl;
+		for(int j=0;j<n;j++){
+			if(i==j || i-j==1 || i-j==(-1)){
+				cout<<arr[l]<<" ";
+				l++;
+			}
+			else {
+				cout<<"0 ";
+			}
+		}
+	}
+	return 0;
 }
