@@ -7,7 +7,7 @@ int main(){
     int x;
 
     while(true){
-        cout<<"-----Stack Menu-----"<<endl;
+        
         cout<<"1. Push"<<endl;
         cout<<"2. Pop"<<endl;
         cout<<"3. isEmpty"<<endl;
